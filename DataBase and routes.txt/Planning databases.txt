@@ -1,0 +1,51 @@
+
+*************************
+PostgreSQL
+**************************
+
+*************************
+Planning databases
+*************************
+
+-EVENTS
+-GRUPOS
+-PEOPLE
+
+
+*************************
+-EVENTS
+*************************
+
+-ID INT PK AUTO_INCREMENT
+-STATUS BOOLEAN DEFAULT = FALSE
+-TITLE STRING 
+-DESCRIPTION  STRING
+-GROUPED BOOLEAN DEFAULT = FALSE
+
+
+*************************
+EVENTSGROUPS
+*************************
+
+-ID INT AUTO_INCREMENT
+-ID_EVENT INT(RELATED EVENTS.ID)
+-NAME STRING
+
+
+
+*************************
+EVENTPEOPLE
+*************************
+
+-ID INT AUTO_INCREMENT
+-ID_EVENT (RELATED EVENTS.ID)
+-ID_GROUP (RELATED EVENTGROUPS.ID)
+-NAME STRING
+-CPF STRING
+-MATCHED STRING DEFAULT=""
+
+
+
+
+
+
